@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,700");
+@import '~normalize.css';
+@import '~@angular/material/theming';
+
+// @import '~highlight.js/styles/github.css';
+
+@include mat-core();
+
+$primary: mat-palette($mat-red, 700);
+$accent: mat-palette($mat-grey, 800);
+$warn: mat-palette($mat-lime, 400);
+$theme: mat-dark-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(assets/bg.png) repeat;
+  min-height: 100vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  max-width: 1255px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-shortcuts .mat-toolbar-row {
+  justify-content: center;
+}
+
+.scroll-view {
+  background-color: mat-color($primary, A100);
+}
+
+.scroll-bar {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.scroll-thumbs {
+  transition: height 150ms ease-out;
+  background-color: rgba(white, 0.1) !important;
+
+  &:hover,
+  &:active {
+    background-color: rgba(white, 0.3) !important;
+  }
+}
+
+mat-form-field {
+  margin-left: 22px;
+}
+
+.ng-scrollbar-horizontal {
+  margin-right: 12px;
+}
+
+.ng-scrollbar-vertical {
+  margin-bottom: 12px;
+}
